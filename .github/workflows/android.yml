@@ -14,7 +14,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"
           tools="$ANDROID_HOME/build-tools/35.0.0"
           platform="$ANDROID_HOME/platforms/android-35/android.jar"
           mkdir -p build/{res/drawable-nodpi,classes,dex}
