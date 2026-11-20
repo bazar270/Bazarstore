@@ -1,0 +1,32 @@
+name: Build Bazar Android
+on:
+  workflow_dispatch:
+  push:
+    paths: ['android/**', '.github/workflows/android.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build unsigned APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+          tools="$ANDROID_HOME/build-tools/35.0.0"
+          platform="$ANDROID_HOME/platforms/android-35/android.jar"
+          mkdir -p build/{res/drawable-nodpi,classes,dex}
+          cp public/icons/bazar-launch-192.png build/res/drawable-nodpi/bazar.png
+          "$tools/aapt2" compile --dir build/res -o build/resources.zip
+          "$tools/aapt2" link -I "$platform" --manifest android/AndroidManifest.xml -o build/app.apk build/resources.zip
+          javac -source 8 -target 8 -bootclasspath "$platform" -d build/classes android/StoreActivity.java
+          jar cf build/classes.jar -C build/classes .
+          "$tools/d8" --lib "$platform" --min-api 24 --output build/dex build/classes.jar
+          (cd build/dex && zip -q ../app.apk classes.dex)
+          "$tools/zipalign" -f 4 build/app.apk build/Bazar-unsigned.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bazar-unsigned
+          path: build/Bazar-unsigned.apk
