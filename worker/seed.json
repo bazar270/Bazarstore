@@ -1,0 +1,82 @@
+[
+  {
+    "id": "0",
+    "category": 1,
+    "ar": "حقيبة كتف بنية",
+    "ckb": "جانتای شانی قاوەیی",
+    "price": 32000,
+    "image": "/img/0.webp",
+    "details": "",
+    "en": "Brown shoulder bag"
+  },
+  {
+    "id": "1",
+    "category": 2,
+    "ar": "قميص رجالي كاجوال",
+    "ckb": "کراسی ڕۆژانەی پیاوان",
+    "price": 38000,
+    "image": "/img/1.webp",
+    "details": "",
+    "en": "Casual men’s shirt"
+  },
+  {
+    "id": "2",
+    "category": 3,
+    "ar": "قميص نسائي بياقة",
+    "ckb": "کراسی یەخەداری ژنان",
+    "price": 29000,
+    "image": "/img/2.webp",
+    "details": "",
+    "en": "Women’s collared shirt"
+  },
+  {
+    "id": "3",
+    "category": 4,
+    "ar": "طقم ملابس رضّع",
+    "ckb": "سێتی جل‌وبەرگی ساوا",
+    "price": 18000,
+    "image": "/img/3.webp",
+    "details": "",
+    "en": "Baby clothing set"
+  },
+  {
+    "id": "4",
+    "category": 5,
+    "ar": "عطر رجالي",
+    "ckb": "بۆنی پیاوان",
+    "price": 45000,
+    "image": "/img/4.webp",
+    "details": "",
+    "en": "Men’s fragrance"
+  },
+  {
+    "id": "5",
+    "category": 6,
+    "ar": "ساعة يد بسوار بني",
+    "ckb": "کاتژمێری دەستی بە قایشێکی قاوەیی",
+    "price": 55000,
+    "image": "/img/5.webp",
+    "details": "",
+    "en": "Brown-strap wristwatch"
+  },
+  {
+    "id": "6",
+    "category": 7,
+    "ar": "قدر طبخ بمقبض",
+    "ckb": "مەنجەڵی دەسکدار",
+    "price": 36000,
+    "image": "/img/6.webp",
+    "details": "",
+    "en": "Saucepan with handle"
+  },
+  {
+    "id": "7",
+    "category": 1,
+    "ar": "أقراط هندسية ذهبية اللون",
+    "ckb": "گوێوارەی ئەندازەیی بە ڕەنگی زێڕین",
+    "price": 12000,
+    "image": "/img/7.webp",
+    "details": "",
+    "en": "Gold-tone geometric earrings"
+  }
+]
