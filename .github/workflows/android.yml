@@ -30,3 +30,9 @@ jobs:
         with:
           name: bazar-unsigned
           path: build/Bazar-unsigned.apk
+      - name: Prepare Android SDK verifier for offline signing
+        run: cp "$ANDROID_HOME/build-tools/35.0.0/lib/apksigner.jar" build/apksigner.jar
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-sdk-verifier
+          path: build/apksigner.jar
